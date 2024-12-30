@@ -1,4 +1,4 @@
-class Solution {
+class Longest_Palindromic_Substring {
 public:
     int propagation(string s,int *l,int *r){
         int n=s.size() , ans=1;

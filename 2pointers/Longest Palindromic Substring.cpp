@@ -1,5 +1,26 @@
 class Longest_Palindromic_Substring {
+
+    /*giving a string return the longest substrinvg
+    input : azebezkk
+    output: zebez
+    
+    input : tbesseblppm
+    output: besseb
+    */
+
 public:
+    /*
+    azebezkk
+    the longest substring in this case is an odd palandrom with a length = 5
+    when i index of longestPalindrome function equals to 3 and l2=3 and r2=3
+    the pointers l and r will expand to the right and left while the string is palandromic
+    and finally we will get the length of the palandromic string by calculating length = r -l +1
+    the substring that we will get is : zebez and ans = 5;
+
+    same for the even case tbesseblppm
+    when i=3 =>l1=3 and r2=4
+    and while we have a palandromic substring the l and r pointers will expand  
+    */
     int propagation(string s,int *l,int *r){
         int n=s.size() , ans=1;
         while((*l) >=0 && (*r)<n && s[*l]==s[*r])
@@ -33,6 +54,8 @@ public:
 
 
             //select the right palindrom 
+
+            /*we will save each time the longest substring*/
             if(maxLength< max(len1 , len2)){
                 if(len1>len2){
                     maxLength=len1;
